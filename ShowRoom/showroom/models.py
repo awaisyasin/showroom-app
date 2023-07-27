@@ -33,7 +33,6 @@ class Engine(models.Model):
     horsepower = models.IntegerField()
     torque = models.IntegerField()
     car = models.OneToOneField(Car, on_delete=models.CASCADE, related_name="engine", null=True, blank=True)
-    model = models.OneToOneField(Model, on_delete=models.CASCADE)
     def __str__(self):
         return self.engine_number
 
