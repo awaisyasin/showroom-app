@@ -1,0 +1,26 @@
+{% extends 'showroom/base.html' %}
+
+{% block content %}
+
+<!-- Staff  -->
+
+<div class="my-4  px-4">
+<div class="row">
+<div class="col-md-1">
+<div class="card" style="width: 79rem;">
+    <img src="{{ member.image.url }}" style="width: 150px; height: 150px;" ="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ member.name }}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <strong>Age: </strong>{{ member.age }} <br>
+      <strong>Gender: </strong>{{ member.get_gender_display }} <br>
+      <strong>Email: </strong>{{ member.email }} <p></p>
+      <a href="{% url 'showroom:staff' %}" class="btn btn-primary">Go back</a>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!-- End Staff-->
+
+{% endblock %}
